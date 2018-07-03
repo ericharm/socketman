@@ -11,7 +11,7 @@ let stage = new window.createjs.Stage('stage-canvas')
 let circle = new window.createjs.Shape()
 circle.x = 100
 circle.y = 100
-circle.graphics.beginFill('#000000').drawCircle(10, 10, 100)
+circle.graphics.beginFill('#000000').drawCircle(10, 10, 10)
 stage.addChild(circle)
 stage.update()
 

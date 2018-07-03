@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var socket = window.io()\n\nvar handleKeyPress = (event) => {\n  socket.emit('keypress', event.key)\n}\n\ndocument.addEventListener('keypress', handleKeyPress)\n\n// stage\nlet stage = new window.createjs.Stage('stage-canvas')\nlet circle = new window.createjs.Shape()\ncircle.x = 100\ncircle.y = 100\ncircle.graphics.beginFill('#000000').drawCircle(10, 10, 100)\nstage.addChild(circle)\nstage.update()\n\nconst movements = {\n  'w': { x: 0, y: -1 },\n  'a': { x: -1, y: 0 },\n  's': { x: 0, y: 1 },\n  'd': { x: 1, y: 0 }\n}\n\nconst speed = 20\n\nsocket.on('moveCircle', (data) => {\n  circle.x += movements[data.direction].x * speed\n  circle.y += movements[data.direction].y * speed\n  stage.update()\n})\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("var socket = window.io()\n\nvar handleKeyPress = (event) => {\n  socket.emit('keypress', event.key)\n}\n\ndocument.addEventListener('keypress', handleKeyPress)\n\n// stage\nlet stage = new window.createjs.Stage('stage-canvas')\nlet circle = new window.createjs.Shape()\ncircle.x = 100\ncircle.y = 100\ncircle.graphics.beginFill('#000000').drawCircle(10, 10, 10)\nstage.addChild(circle)\nstage.update()\n\nconst movements = {\n  'w': { x: 0, y: -1 },\n  'a': { x: -1, y: 0 },\n  's': { x: 0, y: 1 },\n  'd': { x: 1, y: 0 }\n}\n\nconst speed = 20\n\nsocket.on('moveCircle', (data) => {\n  circle.x += movements[data.direction].x * speed\n  circle.y += movements[data.direction].y * speed\n  stage.update()\n})\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
