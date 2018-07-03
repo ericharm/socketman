@@ -1,3 +1,7 @@
+`git clone https://github.com/ericharm/socketman.git`
+
+`cd socketman`
+
 `npm install`
 
 `npm start`
